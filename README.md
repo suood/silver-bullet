@@ -5,10 +5,20 @@
 #### 如何查看rust代码编译后生成的汇编指令
 ```shell
 cargo rustc --release -- --emit asm      # 生成汇编指令
+cargo rustc --release --emit asm -C "llvm-args=-x86-asm-syntax=intel"
 ls target/release/deps/<crate_name>-<hash>.s # 对应目录和文件名 target/release/deps/silver_bullet-*********.s 
 ```
 
+### cargo build optimization
 
+```properties
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+
+```
 
 
 
