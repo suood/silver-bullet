@@ -1,7 +1,7 @@
 /**
  *  Rust has three kinds of loops: loop, while, and for
  */
-//
+// for
 pub fn get_sum_with_for() -> i32 {
     let mut sum = 0;
     for i in 1..=100 { // for in .. loop
@@ -10,6 +10,7 @@ pub fn get_sum_with_for() -> i32 {
     return sum;
 }
 
+// loop
 pub fn get_sum_with_loop() -> i32 {
     let mut sum: i32 = 0;
     let mut i: i32 = 0;
@@ -21,6 +22,7 @@ pub fn get_sum_with_loop() -> i32 {
     return sum;
 }
 
+// while
 pub fn get_sun_with_while() -> i32 {
     let mut sum: i32 = 0;
     let mut i: i32 = 0;
