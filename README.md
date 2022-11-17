@@ -1,9 +1,12 @@
 # silver-bullet
+## RUST 语言学习项目
 
 
-
-
-
+#### 如何查看rust代码编译后生成的汇编指令
+```shell
+cargo rustc --release -- --emit asm      # 生成汇编指令
+ls target/release/deps/<crate_name>-<hash>.s # 对应目录和文件名 target/release/deps/silver_bullet-*********.s 
+```
 
 
 
