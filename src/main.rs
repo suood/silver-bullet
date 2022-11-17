@@ -1,4 +1,6 @@
+mod test_mod;
 fn main() {
+    test_mod::print_hello();
     println!("{}", get_sum());
 }
 fn get_sum() -> i32{
