@@ -1,17 +1,8 @@
 mod learn_mod;
+mod learn_loop;
 fn main() {
     learn_mod::print_hello();
-    println!("{}", get_sum_for_loop());
-}
-fn get_sum_for_loop() -> i32{
-    let mut sum = 0;
-    for i in 1..=100 { // for in .. loop
-        sum += i
-    }
-    return sum
-}
-
-fn get_sum_do_loop() -> i32{
-    let mut sum:i32 = 0;
-
+    println!("{}", learn_loop::get_sum_with_loop());
+    println!("{}", learn_loop::get_sum_with_for());
+    println!("{}", learn_loop::get_sun_with_while());
 }
