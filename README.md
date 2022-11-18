@@ -13,7 +13,7 @@ ls target/release/deps/<crate_name>-<hash>.s # 对应目录和文件名 target/r
 
 ```properties
 [profile.dev]
-opt-level = 0
+opt-level = 3
 
 [profile.release]
 opt-level = 3

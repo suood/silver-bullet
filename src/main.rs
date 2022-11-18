@@ -5,4 +5,5 @@ fn main() {
     println!("{}", learn_loop::get_sum_with_loop());
     println!("{}", learn_loop::get_sum_with_for());
     println!("{}", learn_loop::get_sun_with_while());
+    learn_loop::show_loop_jump();
 }
