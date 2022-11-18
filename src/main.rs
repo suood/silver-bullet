@@ -2,6 +2,7 @@ mod learn_mod;
 mod learn_loop;
 mod learn_owner;
 fn main() {
+    // 从 hello world.
     learn_mod::print_hello();
     println!("{}", learn_loop::get_sum_with_loop());
     println!("{}", learn_loop::get_sum_with_for());

@@ -11,7 +11,7 @@
 
 $touch ./learn_owner/mod.rs
 #或者
-$touch ./learn_owner/learn_owner.rs
+$touch ./learn_owner/learn_owner.rs.bak
 
 ```
 ### 为什么要学习Ownership 

@@ -5,7 +5,7 @@
 #### 如何查看rust代码编译后生成的汇编指令
 ```shell
 cargo rustc --release -- --emit asm      # 生成汇编指令
-cargo rustc --release --emit asm -C "llvm-args=-x86-asm-syntax=intel"
+cargo rustc --release -- --emit asm -C "llvm-args=-x86-asm-syntax=intel"
 ls target/release/deps/<crate_name>-<hash>.s # 对应目录和文件名 target/release/deps/silver_bullet-*********.s 
 ```
 
@@ -21,7 +21,42 @@ opt-level = 3
 ```
 
 
+#### 一点汇编寄存器小知识
 
+<p>
+  有16个常用寄存器
+
+  rax 、rbx、rcx、rdx、rsx、rdi、rbp、rsp
+
+  r8、r9、r10、r11、r12、r13、r14、r15
+
+  寄存器的具体用途
+
+  rax、rdx常作为函数返回值使用
+
+  rdi、rsi、rdx、rcx、r8、r9等寄存器常用于存放函数参数
+
+  rsp、rdp用于栈操作
+
+  rip 作为指令指针
+
+  存储着CPU下一条要执行的指令的地址
+  一旦CPU读取一条指令，rip会自动指向下一条指令（存储下一条指令的地址）
+  r开头：64bit, 8字节
+  e开头：32bit, 4字节
+  ax,bx,cx: 16bit, 2字节
+  ah, al: 8bit, 1字节
+  规律：
+
+  内存地址格式为： 0x4bdc(%rip), 一般是全局变量，全局区（数据段）
+  内存地址格式为：-0x78(%rbp), 一般是局部变量，栈空间
+  内存地址格式为：0x10(%rax), 一般是堆空间
+
+  movq 指令每次只能够移动8个字节
+
+  callq *%rax 间接访问寄存器中的地址给它发消息
+
+</p>
 
 
 
