@@ -8,3 +8,14 @@ pub  fn owner_with_block(){
     }
     println!("s value = {s}");
 }
+
+/**
+ *   @see String#push_str(&mut self, string: &str)
+*/
+pub fn owner_whit_string(){
+    let mut  s:String = String::from("hello ");
+
+    s.push_str("command line heroes!");
+    println!("s value ={}",s)
+
+}

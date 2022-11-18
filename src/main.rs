@@ -8,4 +8,5 @@ fn main() {
     println!("{}", learn_loop::get_sun_with_while());
     learn_loop::show_loop_jump();
     learn_owner::owner_with_block();
+    learn_owner::owner_whit_string();
 }
