@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 /**
  *  Rust has three kinds of loops: loop, while, and for
  */
