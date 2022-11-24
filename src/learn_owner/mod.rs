@@ -12,7 +12,7 @@ pub fn owner_with_block() {
  *   @see String#push_str(&mut self, string: &str)
  */
 pub fn owner_whit_string() {
-    let mut s: String = String::from_utf8("hello ");
+    let mut s: String = String::from("hello ");
 
     s.push_str("command line heroes!");
     println!("s value ={}", s)

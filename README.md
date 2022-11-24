@@ -4,10 +4,24 @@
 
 #### 如何查看rust代码编译后生成的汇编指令
 ```shell
+cargo  rustc -A dead_code main.rs
 cargo rustc --release -- --emit asm      # 生成汇编指令
 cargo rustc --release -- --emit asm -C "llvm-args=-x86-asm-syntax=intel"
 ls target/release/deps/<crate_name>-<hash>.s # 对应目录和文件名 target/release/deps/silver_bullet-*********.s 
 ```
+
+#### ignore dead code 
+```rust 
+
+#![allow(dead_code)]
+Pass it to rustc:
+
+rustc -A dead_code main.rs
+Pass it using cargo via the RUSTFLAGS environment variable:
+
+RUSTFLAGS="$RUSTFLAGS -A dead_code" cargo build
+```
+
 
 ### cargo build optimization
 
