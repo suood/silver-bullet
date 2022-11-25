@@ -15,11 +15,12 @@ fn main() {
     // learn_owner::owner_whit_string();
     let mut s = String::from("hello world");
 
-    let word = learn_slice::first_word(&s); // word will get the value 5
-    println!("s len:{word}");
+    let word = learn_slice::first_word_str(&s); // word will get the value 5
+
+    println!("word value :{word}");
     s.clear(); // this empties the String, making it equal to ""
 
     // word still has the value 5 here, but there's no more string that
     // we could meaningfully use the value 5 with. word is now totally invalid!
-
+    learn_slice::run_first_word();
 }
